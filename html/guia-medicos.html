@@ -1,0 +1,526 @@
+<!doctype html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="../css/estilos.css" rel="stylesheet" />
+    <meta content="Bleiner" name="author" />
+    <meta
+      content="Guía completa de radicación de cuentas médicas para Profesionales Médicos ante Colmédica: requisitos, formulario y seguimiento de radicados, Res. 2275 de 2023."
+      name="description"
+    />
+    <meta content="website" property="og:type" />
+    <meta content="Guía Médicos Prestadores | Aquarius" property="og:title" />
+    <meta
+      content="Guía completa de radicación de cuentas médicas para Profesionales Médicos ante Colmédica: requisitos, formulario y seguimiento de radicados, Res. 2275 de 2023."
+      property="og:description"
+    />
+    <meta content="https://example.com/html/guia-medicos.html" property="og:url" />
+    <meta content="Aquarius" property="og:site_name" />
+    <meta content="https://example.com/images/Aquarius.png" property="og:image" />
+    <meta content="300" property="og:image:width" />
+    <meta content="261" property="og:image:height" />
+    <meta
+      content="Logotipo de Aquarius, portal de radicación de cuentas médicas"
+      property="og:image:alt"
+    />
+    <meta content="es_CO" property="og:locale" />
+    <title>Guía Médicos Prestadores | Aquarius</title>
+    <link href="../images/logo-cohete.png" rel="icon" type="image/png" />
+  </head>
+  <body>
+    <aside class="barra-lateral" id="barraLateral">
+      <div class="logo">
+        <img alt="Aquarius Radicación" height="100" src="../images/logo.png" width="200" />
+      </div>
+      <button
+        aria-label="Minimizar menú"
+        class="btn-colapsar"
+        id="btnColapsar"
+        title="Minimizar menú"
+      >
+        <img
+          alt=""
+          class="icono-colapsar"
+          height="40"
+          src="../images/iconos/colapsar.jpg"
+          width="40"
+        />
+      </button>
+      <nav class="menu">
+        <a aria-label="Inicio" class="opcion" href="../index.html" title="Inicio">
+          <img
+            alt=""
+            class="icono-opcion"
+            height="22"
+            src="../images/iconos/inicio.jpg"
+            width="22"
+          />
+          <span class="texto-opcion">Inicio</span>
+        </a>
+        <a aria-label="Guía" class="opcion" href="guia.html" title="Guía">
+          <img alt="" class="icono-opcion" height="22" src="../images/iconos/guia.jpg" width="22" />
+          <span class="texto-opcion">Guía</span>
+        </a>
+        <a aria-label="Normativa" class="opcion" href="normativa.html" title="Normativa">
+          <img
+            alt=""
+            class="icono-opcion"
+            height="22"
+            src="../images/iconos/normativa.jpg"
+            width="22"
+          />
+          <span class="texto-opcion">Normativa</span>
+        </a>
+        <a aria-label="Archivos" class="opcion" href="archivos.html" title="Archivos">
+          <img
+            alt=""
+            class="icono-opcion"
+            height="22"
+            src="../images/iconos/archivos.jpg"
+            width="22"
+          />
+          <span class="texto-opcion">Archivos</span>
+        </a>
+        <a aria-label="Practica" class="opcion" href="practica.html" title="Practica">
+          <img
+            alt=""
+            class="icono-opcion"
+            height="22"
+            src="../images/iconos/practica.jpg"
+            width="22"
+          />
+          <span class="texto-opcion">Practica</span>
+        </a>
+        <a aria-label="Masivos" class="opcion" href="masivos.html" title="Masivos">
+          <img
+            alt=""
+            class="icono-opcion"
+            height="22"
+            src="../images/iconos/masivos.jpg"
+            width="22"
+          />
+          <span class="texto-opcion">Masivos</span>
+        </a>
+        <a aria-label="Ayuda" class="opcion" href="ayuda.html" title="Ayuda">
+          <img
+            alt=""
+            class="icono-opcion"
+            height="22"
+            src="../images/iconos/ayuda.jpg"
+            width="22"
+          />
+          <span class="texto-opcion">Ayuda</span>
+        </a>
+      </nav>
+    </aside>
+    <main class="contenido">
+      <header>
+        <div class="guia-header">
+          <div>
+            <h1>
+              <span class="logo-mini-a">R</span>adicacion de cuentas médicas — Médico Prestador
+            </h1>
+            <p class="subtitulo">
+              Guía de radicación de Cuentas Médicas para Médicos Prestadores — Versión 11
+            </p>
+          </div>
+          <a
+            class="btn-descargar"
+            download=""
+            href="../docs/Manual_Aquarius_MEDICOS_PRESTADORES_COLMEDICA_V11.pdf"
+          >
+            📥 Descargar Manual PDF
+          </a>
+        </div>
+      </header>
+      <nav aria-label="Índice de esta guía" class="guia-indice">
+        <p>Ir a:</p>
+        <ul>
+          <li><a href="#beneficios">1. Beneficios y ventajas</a></li>
+          <li><a href="#tips">2. Tips para no olvidar</a></li>
+          <li><a href="#requisitos">3. Requisitos básicos</a></li>
+          <li><a href="#radicacion">4. Cómo radicar su cuenta médica en el nuevo portal</a></li>
+          <li><a href="#formulario">5. Campos Del Formulario</a></li>
+          <li><a href="#documentos">6. Documentos Requeridos</a></li>
+          <li><a href="#seguimiento">7. Seguimiento de radicados</a></li>
+          <li><a href="#estados">8. Estados de la cuenta y su significado</a></li>
+          <li><a href="#devolucion">9. Gestión estado Devolución/Glosa Total</a></li>
+          <li><a href="#soporte">10. Soporte técnico y canales de atención</a></li>
+        </ul>
+      </nav>
+      <section class="guia-seccion" id="beneficios">
+        <h2>1. Beneficios y ventajas</h2>
+        <ul class="guia-lista">
+          <li>Radicación a través del portal de Colmédica.</li>
+          <li>Número de radicado en línea para hacer seguimiento en cualquier momento.</li>
+          <li>Consulta de los estados de la factura durante todo el proceso.</li>
+          <li>Desmaterialización total: cargue de soportes en formato PDF.</li>
+          <li>Ingreso con su propio perfil o con el de sus delegatarios activos.</li>
+          <li>Mayor eficiencia en todo el proceso de radicación.</li>
+        </ul>
+      </section>
+      <section class="guia-seccion" id="tips">
+        <h2>2. Tips para no olvidar</h2>
+        <ul class="guia-lista">
+          <li>
+            La radicación de cuentas médicas se realiza del <strong>1 al 15 de cada mes</strong>; si
+            el día 15 cae en fin de semana o festivo, se habilita un día hábil adicional.
+          </li>
+          <li>
+            Si radica después de la fecha de corte mensual, la cuenta queda procesada con fecha del
+            primer día hábil del mes siguiente; el aplicativo le mostrará un aviso informativo al
+            realizar esta radicación.
+          </li>
+          <li>
+            Si la cuenta no presenta glosas y supera satisfactoriamente el proceso de auditoría, el
+            pago se realiza dentro del mismo mes de radicación.
+          </li>
+        </ul>
+      </section>
+      <section class="guia-seccion" id="requisitos">
+        <h2>3. Requisitos básicos</h2>
+        <ul class="guia-lista">
+          <li>Pertenecer a la red de Profesionales Médicos de Colmédica.</li>
+          <li>
+            Surtir el proceso de acceso y doble factor de autenticación en el Portal de Colmédica.
+          </li>
+          <li>
+            Si está obligado a facturar electrónicamente, remitir a través de su operador de
+            Facturación Electrónica la representación gráfica y el XML al buzón corporativo y anexar
+            el XML junto con la factura en la radicacon.
+            <code>fe.colmedica.800106339@ctsprd.receptoriacarvajal.com</code>.
+          </li>
+        </ul>
+        <h3>Para evitar glosas y devoluciones innecesarias</h3>
+        <ul class="guia-lista">
+          <li>
+            En la representación gráfica debe registrar el valor de las
+            <abbr title="Unidad de Pago por Deducible">UPD</abbr> recaudadas a los usuarios.
+          </li>
+          <li>
+            El valor de los detalles de los servicios debe coincidir con el valor registrado en la
+            factura.
+          </li>
+          <li>No olvide registrar, o adjuntar, las autorizaciones de servicios.</li>
+          <li>
+            No olvide adjuntar la planilla de aportes
+            <abbr title="Planilla Integrada de Liquidación de Aportes">PILA</abbr> debidamente
+            cancelada cuando el valor de los servicios a facturar supere 1
+            <abbr title="Salario Mínimo Legal Vigente">SMLV</abbr>.
+          </li>
+        </ul>
+        <h3>Si liquida sus servicios de consulta y procedimientos a través del portal</h3>
+        <ul class="guia-lista">
+          <li>
+            En la planilla, en el campo "No de factura", registre el número de la factura tal como
+            aparece en la representación gráfica emitida junto con el XML.
+          </li>
+          <li>
+            No registre anotaciones o modificaciones manuales sobre las planillas que presenta como
+            soportes.
+          </li>
+          <li>
+            Esto garantiza que su cuenta presente el mínimo de glosas parciales y/o devoluciones
+            totales.
+          </li>
+        </ul>
+        <div class="aviso aviso-warning">
+          Garantice una buena conexión de internet: de ella depende un cargue óptimo y una respuesta
+          rápida en su radicación.
+        </div>
+      </section>
+      <section class="guia-seccion" id="radicacion">
+        <h2>4. Cómo radicar su cuenta médica en el nuevo portal</h2>
+        <ol class="guia-pasos">
+          <li>Ingrese al portal de Colmédica.</li>
+          <li>
+            En la pantalla de bienvenida del nuevo portal de radicación, dé clic en el primer ícono
+            que aparece en la parte superior izquierda: <strong>"Radicar Documentos"</strong>, para
+            realizar una radicación individual.
+          </li>
+          <li>
+            Se abrirá el módulo "Radicar Documentos". Elija de la lista desplegable la serie de
+            acuerdo a su rol asignado.
+          </li>
+          <li>
+            Diligencie el formulario con los campos requeridos. Algunos campos tienen validaciones
+            que muestran mensajes de ayuda para verificar lo digitado. Al finalizar, dé clic en
+            <strong>Siguiente</strong>.
+          </li>
+          <li>
+            Revise el mensaje de confirmación de los datos; si está seguro, dé clic en
+            <strong>Aceptar</strong>, o en <strong>Cancelar</strong> para reiniciar el
+            diligenciamiento.
+          </li>
+          <li>
+            Antes de cargar los archivos, el aplicativo le recuerda los documentos mínimos que debe
+            tener en cuenta el archivo de anexos para evitar glosas.
+          </li>
+          <li>
+            Cargue los archivos en los 4 cajones habilitados según la Resolución 2275 de 2023 (ver
+            sección siguiente).
+          </li>
+          <li>
+            Al dar clic en <strong>Finalizar</strong>, aparecerá la pantalla de radicación exitosa
+            con un código único de radicación, fecha y hora.
+          </li>
+        </ol>
+        <div class="aviso aviso-success">
+          Ese código es su radicado oficial de la cuenta médica: consérvelo para su control y
+          seguimiento.
+        </div>
+        <div class="aviso aviso-info">
+          Todos los documentos soporte deben quedar en un solo archivo PDF para el cargue.
+        </div>
+      </section>
+      <section class="guia-seccion" id="formulario">
+        <h2>5. Campos Del Formulario</h2>
+        <table class="guia-tabla">
+          <caption>
+            5. Campos Del Formulario
+          </caption>
+          <thead>
+            <tr>
+              <th>Campo</th>
+              <th>Dato a ingresar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>No identificación</td>
+              <td>Digite su número de identificación sin puntos ni dígito de verificación.</td>
+            </tr>
+            <tr>
+              <td>Validación No identificación</td>
+              <td>Campo para revalidar el número ingresado en el cuadro anterior.</td>
+            </tr>
+            <tr>
+              <td>Prefijo</td>
+              <td>Prefijo de su número de factura.</td>
+            </tr>
+            <tr>
+              <td>Número Factura</td>
+              <td>Número de factura.</td>
+            </tr>
+            <tr>
+              <td>Fecha Factura</td>
+              <td>dd/mm/aaaa.</td>
+            </tr>
+            <tr>
+              <td>Valor Factura</td>
+              <td>Valor bruto de la factura, sin puntos, antes de UPD.</td>
+            </tr>
+            <tr>
+              <td>Valor Bonos UPD</td>
+              <td>Valor UPD sin puntos.</td>
+            </tr>
+            <tr>
+              <td>Mes Aporte</td>
+              <td>
+                Si aplica: mes PILA del pago del aporte, correspondiente al mes inmediatamente
+                anterior a la fecha de emisión de la factura.
+              </td>
+            </tr>
+            <tr>
+              <td>Liquidación Portal Prestadores</td>
+              <td>Indicar si realizó la liquidación de servicios en el portal de Colmédica.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="guia-seccion" id="documentos">
+        <h2>6. Documentos Requeridos</h2>
+        <p>
+          Se habilitaron 4 cajones para radicar sus archivos, según la normatividad de la
+          <strong>Resolución 2275 de 2023</strong>:
+        </p>
+        <table class="guia-tabla">
+          <caption>
+            6. Documentos Requeridos
+          </caption>
+          <thead>
+            <tr>
+              <th>Cajón</th>
+              <th>Contenido</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Archivo .zip emitido por la DIAN y/o PDF de la factura únicamente.</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Archivo PDF que contenga la totalidad de soportes; no incluye la factura.</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Archivo .zip en formato TXT o JSON.</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Archivo TXT o JSON con los 96 caracteres obtenidos ante el Ministerio.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="guia-seccion" id="seguimiento">
+        <h2>7. Seguimiento de radicados</h2>
+        <p>
+          Una vez radicada su cuenta médica, si desea validar su estado en el proceso, ingrese a la
+          opción <strong>"Gestión de Radicados"</strong>. Puede consultar por:
+        </p>
+        <ul class="guia-lista">
+          <li>Número de radicado.</li>
+          <li>Rango de fechas de radicación.</li>
+        </ul>
+        <p>
+          Al seleccionar la opción de clic sobre un radicado, el sistema le mostrará las
+          observaciones de su estado.
+        </p>
+      </section>
+      <section class="guia-seccion" id="estados">
+        <h2>8. Estados de la cuenta y su significado</h2>
+        <table class="guia-tabla">
+          <caption>
+            8. Estados de la cuenta y su significado
+          </caption>
+          <thead>
+            <tr>
+              <th>Estado</th>
+              <th>Significado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Cargado</strong></td>
+              <td>La cuenta médica fue cargada exitosamente e inicia su proceso.</td>
+            </tr>
+            <tr>
+              <td><strong>En proceso</strong></td>
+              <td>La cuenta médica está en gestión de radicación.</td>
+            </tr>
+            <tr>
+              <td><strong>Gestionado</strong></td>
+              <td>La cuenta ya está radicada, con folio asignado.</td>
+            </tr>
+            <tr>
+              <td><strong>Con error</strong></td>
+              <td>Los archivos PDF están corruptos o en mal estado; debe volver a cargarlos.</td>
+            </tr>
+            <tr>
+              <td><strong>Glosa Total</strong></td>
+              <td>
+                La radicacion fue englosada en su totalidad y debera realizar el proceso de
+                subsanacion de la glosa y volver a cargarla.
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Aprobado Con Glosa</strong></td>
+              <td>
+                La radicacion fue aprobada en su mayoria y se engloso una parte de la factura, (Para
+                mayor informacion comunicarse con Glosas Y Devoluciones).
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="guia-seccion" id="devolucion">
+        <h2>9. Gestión estado Devolución/Glosa Total</h2>
+        <p>
+          Tenga en cuenta lo siguiente cuando, al consultar después de radicada su cuenta, el estado
+          de gestión sea <strong>Devolución/Glosa Total</strong>:
+        </p>
+        <ol class="guia-pasos">
+          <li>
+            Valide la causal de la devolución, solucione y/o corrija y/o complemente el motivo,
+            alistando nuevos archivos PDF, y realice un nuevo cargue en el aplicativo.
+          </li>
+          <li>Debe cargar nuevamente el PDF de la factura y el PDF de anexos.</li>
+          <li>Sobre este último radicado debe realizar las consultas de estado.</li>
+          <li>
+            Hasta que el radicado inicial no esté en estado <strong>Devuelto u Glosa Total</strong>,
+            no podrá recargar la nueva radicación.
+          </li>
+        </ol>
+        <div class="aviso aviso-warning">
+          Recibirá una notificación al último correo electrónico suministrado cuando su radicado,
+          por alguna causal, no pueda ser procesado y quede en estado Devolución. Hasta que su
+          radicado no esté en estado Devuelto, no podrá reingresar su cuenta solucionada.
+        </div>
+      </section>
+      <section class="guia-seccion" id="soporte">
+        <h2>10. Soporte técnico y canales de atención</h2>
+        <div class="guia-tabla-doble">
+          <article>
+            <h3>Soporte técnico — plataforma Aquarius</h3>
+            <p>Celular <strong>3167330355</strong></p>
+            <p>PBX <strong>601-3402501</strong> opción 5</p>
+            <p>
+              Lunes a viernes hábiles, de <time datetime="07:00">7:00 am</time> a
+              <time datetime="17:00">5:00 pm</time>.
+            </p>
+            <p>
+              <strong>Temas:</strong>
+              plataforma caída o sin acceso, avisos inesperados de funcionamiento, no genera número
+              de radicado.
+            </p>
+          </article>
+          <article>
+            <h3>Soporte administrativo — portal web Colmédica</h3>
+            <p>
+              <a href="http://www.colmedica.com" rel="noopener noreferrer" target="_blank">
+                www.colmedica.com
+              </a>
+            </p>
+            <p>
+              En Bogotá, línea <strong>601-7569000</strong>
+              opción 1 y 7
+            </p>
+            <p>
+              <strong>Temas:</strong>
+              dificultad de acceso al portal, dificultad de acceso al portal de prestadores médicos,
+              demoras en tiempo de respuesta.
+            </p>
+          </article>
+        </div>
+        <article>
+          <h3>Soporte administrativo — cuentas médicas</h3>
+          <p>
+            Para consultas del resultado del proceso de cuentas médicas: cuando la plataforma no le
+            permite radicar por primera vez, o no le permite radicar nuevamente una factura
+            devuelta, escriba a la Jefatura de Cuentas Médicas:
+          </p>
+          <p>
+            <a href="mailto:ernestop@colmedica.com"> ernestop@colmedica.com </a>
+            y
+            <a href="mailto:Jeimyahm@aliansalud.com.co"> Jeimyahm@aliansalud.com.co </a>
+          </p>
+        </article>
+        <div class="aviso aviso-warning">
+          <strong>Aviso importante:</strong>
+          el buzón de correo
+          <code>Cuentasmedicasprofesionales@colmedica.com</code>, donde antes se enviaban las
+          cuentas médicas, ya no está activo.
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>
+        © <time datetime="2026">2026</time> Aquarius — Proyecto académico de radicación de cuentas
+        médicas. Universidad Central, Bogotá.
+      </p>
+      <p>Desarrollado por <strong>Bleiner Alexis Luna Obando</strong></p>
+    </footer>
+    <a
+      aria-label="Volver al inicio"
+      class="boton-inicio"
+      href="../index.html"
+      title="Volver al inicio"
+    >
+      <span>🚀</span>
+    </a>
+  </body>
+</html>

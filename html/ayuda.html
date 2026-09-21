@@ -1,0 +1,375 @@
+<!doctype html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="../css/estilos.css" rel="stylesheet" />
+    <meta content="Bleiner" name="author" />
+    <meta
+      content="Preguntas frecuentes, canales de soporte técnico y administrativo, y formulario de contacto para resolver dudas sobre radicación de cuentas médicas en Aquarius."
+      name="description"
+    />
+    <meta content="website" property="og:type" />
+    <meta content="Ayuda | Aquarius" property="og:title" />
+    <meta
+      content="Preguntas frecuentes, canales de soporte técnico y administrativo, y formulario de contacto para resolver dudas sobre radicación de cuentas médicas en Aquarius."
+      property="og:description"
+    />
+    <meta
+      content="https://example.com/html/ayuda.html"
+      property="og:url"
+    />
+    <meta content="Aquarius" property="og:site_name" />
+    <meta
+      content="https://example.com/images/Aquarius.png"
+      property="og:image"
+    />
+    <meta content="300" property="og:image:width" />
+    <meta content="261" property="og:image:height" />
+    <meta
+      content="Logotipo de Aquarius, portal de radicación de cuentas médicas"
+      property="og:image:alt"
+    />
+    <meta content="es_CO" property="og:locale" />
+    <title>Ayuda | Aquarius</title>
+    <link href="../images/logo-cohete.png" rel="icon" type="image/png" />
+  </head>
+  <body>
+    <aside class="barra-lateral" id="barraLateral">
+      <div class="logo">
+        <img
+          alt="Aquarius Radicación"
+          class="logo-completo"
+          height="100"
+          src="../images/logo.png"
+          width="200"
+        />
+        <img
+          alt="Aquarius"
+          class="logo-mini-icono"
+          height="128"
+          src="../images/logo-cohete.png"
+          width="116"
+        />
+      </div>
+      <button
+        aria-label="Minimizar menú"
+        class="btn-colapsar"
+        id="btnColapsar"
+        title="Minimizar menú"
+      >
+        <img
+          alt=""
+          class="icono-colapsar"
+          height="40"
+          src="../images/iconos/colapsar.jpg"
+          width="40"
+        />
+      </button>
+      <nav class="menu">
+        <a
+          aria-label="Inicio"
+          class="opcion"
+          href="../index.html"
+          title="Inicio"
+        >
+          <img
+            alt=""
+            class="icono-opcion"
+            height="22"
+            src="../images/iconos/inicio.jpg"
+            width="22"
+          />
+          <span class="texto-opcion">Inicio</span>
+        </a>
+        <a aria-label="Guía" class="opcion" href="guia.html" title="Guía">
+          <img
+            alt=""
+            class="icono-opcion"
+            height="22"
+            src="../images/iconos/guia.jpg"
+            width="22"
+          />
+          <span class="texto-opcion">Guía</span>
+        </a>
+        <a
+          aria-label="Normativa"
+          class="opcion"
+          href="normativa.html"
+          title="Normativa"
+        >
+          <img
+            alt=""
+            class="icono-opcion"
+            height="22"
+            src="../images/iconos/normativa.jpg"
+            width="22"
+          />
+          <span class="texto-opcion">Normativa</span>
+        </a>
+        <a
+          aria-label="Archivos"
+          class="opcion"
+          href="archivos.html"
+          title="Archivos"
+        >
+          <img
+            alt=""
+            class="icono-opcion"
+            height="22"
+            src="../images/iconos/archivos.jpg"
+            width="22"
+          />
+          <span class="texto-opcion">Archivos</span>
+        </a>
+        <a
+          aria-label="Practica"
+          class="opcion"
+          href="practica.html"
+          title="Practica"
+        >
+          <img
+            alt=""
+            class="icono-opcion"
+            height="22"
+            src="../images/iconos/practica.jpg"
+            width="22"
+          />
+          <span class="texto-opcion">Practica</span>
+        </a>
+        <a
+          aria-label="Masivos"
+          class="opcion"
+          href="masivos.html"
+          title="Masivos"
+        >
+          <img
+            alt=""
+            class="icono-opcion"
+            height="22"
+            src="../images/iconos/masivos.jpg"
+            width="22"
+          />
+          <span class="texto-opcion">Masivos</span>
+        </a>
+        <a aria-label="Ayuda" class="opcion" href="ayuda.html" title="Ayuda">
+          <img
+            alt=""
+            class="icono-opcion"
+            height="22"
+            src="../images/iconos/ayuda.jpg"
+            width="22"
+          />
+          <span class="texto-opcion">Ayuda</span>
+        </a>
+      </nav>
+    </aside>
+    <main class="contenido">
+      <header>
+        <h1>Ayuda</h1>
+        <p class="subtitulo">Preguntas frecuentes y canales de soporte</p>
+      </header>
+      <nav aria-label="Índice de esta guía" class="guia-indice">
+        <p>Ir a:</p>
+        <ul>
+          <li><a href="#faq">Preguntas frecuentes</a></li>
+          <li><a href="#soporte">Canales de soporte</a></li>
+          <li>
+            <a href="#contacto">¿No encontraste tu respuesta? Escríbenos</a>
+          </li>
+        </ul>
+      </nav>
+      <section class="guia-seccion" id="faq">
+        <h2>Preguntas frecuentes</h2>
+        <details class="faq-item">
+          <summary>¿Qué significa el estado "Con error"?</summary>
+          <p>
+            Indica que los archivos PDF cargados están dañados o en mal estado.
+            Debe volver a generarlos y cargarlos nuevamente.
+          </p>
+        </details>
+        <details class="faq-item">
+          <summary>¿Hasta qué fecha puedo radicar en el mes?</summary>
+          <p>
+            Del 1 al 15 de cada mes. Si el día 15 cae en fin de semana o
+            festivo, se habilita un día hábil adicional. Si radica después, la
+            cuenta queda con fecha del primer día hábil del mes siguiente.
+          </p>
+        </details>
+        <details class="faq-item">
+          <summary>Mi cuenta quedó en estado Devolución, ¿qué hago?</summary>
+          <p>
+            Valide la causal, corrija los archivos y realice un nuevo cargue.
+            <em>No podrá</em> recargar la subsanación hasta que el radicado
+            original esté en estado "Devuelto".
+          </p>
+        </details>
+        <details class="faq-item">
+          <summary>¿Todos los soportes van en un solo PDF?</summary>
+          <p>
+            Sí. Todos los documentos soporte (sin incluir la factura) deben
+            quedar consolidados en un único archivo PDF para el cargue.
+          </p>
+        </details>
+      </section>
+      <section class="guia-seccion" id="soporte">
+        <h2>Canales de soporte</h2>
+        <table class="guia-tabla">
+          <caption>
+            Canales de soporte
+          </caption>
+          <thead>
+            <tr>
+              <th>Canal</th>
+              <th>Contacto</th>
+              <th>Para qué sirve</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Soporte técnico Aquarius</td>
+              <td>
+                PBX 601-3402501 opción 5 · Celular 3167330355 (L-V, 7am-5pm)
+              </td>
+              <td>Plataforma caída, avisos inesperados, no genera radicado.</td>
+            </tr>
+            <tr>
+              <td>Soporte administrativo Colmédica</td>
+              <td>601-7569000 opciones 1 y 7</td>
+              <td>Acceso al portal, demoras en respuesta.</td>
+            </tr>
+            <tr>
+              <td>Cuentas médicas</td>
+              <td>
+                <a href="mailto:ernestop@colmedica.com"
+                  >ernestop@colmedica.com</a
+                >
+                <a href="mailto:zaidagj@colmedica.com">zaidagj@colmedica.com</a>
+              </td>
+              <td>
+                No puede radicar por primera vez o no puede radicar una
+                devolución.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="guia-seccion" id="contacto">
+        <h2>¿No encontraste tu respuesta? Escríbenos</h2>
+        <p>
+          Completa el formulario y el equipo de soporte de
+          <abbr title="Aquarius, aplicativo de radicación de cuentas médicas"
+            >Aquarius</abbr
+          >
+          te responderá a tu correo.
+        </p>
+        <form
+          action="#"
+          class="formulario-contacto"
+          method="post"
+          onsubmit="return false;"
+        >
+          <fieldset>
+            <legend>Datos de contacto</legend>
+            <div class="campo">
+              <label for="tipo-usuario">Motivo de la consulta</label>
+              <select id="tipo-usuario" name="tipo-usuario" required="">
+                <option value="">Selecciona una opción</option>
+                <option value="IPS">
+                  IPS afiliada a Colmédica o Aliansalud
+                </option>
+                <option value="Medico">
+                  Médico afiliado a Colmédica o Aliansalud
+                </option>
+              </select>
+            </div>
+            <div class="campo">
+              <label for="nombre">Nombre</label>
+              <input
+                id="nombre"
+                maxlength="80"
+                minlength="3"
+                name="nombre"
+                placeholder="Nombre de la IPS o Medico"
+                required=""
+                type="text"
+              />
+            </div>
+            <div class="campo">
+              <label for="correo">Correo electrónico</label>
+              <input
+                id="correo"
+                name="correo"
+                placeholder="tucorreo@dominio.com"
+                required=""
+                type="email"
+              />
+            </div>
+            <div class="campo">
+              <label for="telefono">Teléfono de contacto</label>
+              <input
+                id="telefono"
+                name="telefono"
+                pattern="[0-9]{7,10}"
+                placeholder="3167330355"
+                title="Solo números, entre 7 y 10 dígitos"
+                type="tel"
+              />
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Detalle de tu solicitud</legend>
+            <div class="campo">
+              <label for="motivo">Motivo de la consulta</label>
+              <select id="motivo" name="motivo" required="">
+                <option value="">Selecciona una opción</option>
+                <option value="plataforma-caida">
+                  La plataforma no carga o está caída
+                </option>
+                <option value="sin-radicado">
+                  No genera número de radicado
+                </option>
+                <option value="acceso-portal">
+                  Problemas de acceso al portal
+                </option>
+                <option value="devolucion">
+                  Dudas sobre un estado de devolución
+                </option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+            <div class="campo">
+              <label for="mensaje">Cuéntanos qué pasó</label>
+              <textarea
+                id="mensaje"
+                maxlength="600"
+                minlength="10"
+                name="mensaje"
+                placeholder="Describe brevemente tu inconveniente o duda..."
+                required=""
+                rows="5"
+              ></textarea>
+            </div>
+          </fieldset>
+          <button class="btn-descargar" type="submit">Enviar consulta</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>
+        © <time datetime="2026">2026</time> Aquarius — Proyecto académico de
+        radicación de cuentas médicas. Universidad Central, Bogotá.
+      </p>
+      <p>Desarrollado por <strong>Bleiner Alexis Luna Obando</strong></p>
+    </footer>
+    <a
+      aria-label="Volver al inicio"
+      class="boton-inicio"
+      href="../index.html"
+      title="Volver al inicio"
+    >
+      <span>🚀</span>
+    </a>
+  </body>
+</html>
