@@ -1,0 +1,428 @@
+<!doctype html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="../css/estilos.css" rel="stylesheet" />
+    <meta content="Bleiner" name="author" />
+    <meta
+      content="Guía completa de radicación de cuentas médicas para IPS y Proveedores ante Colmédica: requisitos, radicación individual, masiva, seguimiento, Res. 2275 de 2023."
+      name="description"
+    />
+    <meta content="website" property="og:type" />
+    <meta content="Guía IPS Colmédica | Aquarius" property="og:title" />
+    <meta
+      content="Guía completa de radicación de cuentas médicas para IPS y Proveedores ante Colmédica: requisitos, radicación individual, masiva, seguimiento, Res. 2275 de 2023."
+      property="og:description"
+    />
+    <meta
+      content="https://eyker-07.github.io/Aquarius/html/guia-ips-colmedica.html"
+      property="og:url"
+    />
+    <meta content="Aquarius" property="og:site_name" />
+    <meta content="https://eyker-07.github.io/Aquarius/images/Aquarius.png" property="og:image" />
+    <meta content="300" property="og:image:width" />
+    <meta content="261" property="og:image:height" />
+    <meta
+      content="Logotipo de Aquarius, portal de radicación de cuentas médicas"
+      property="og:image:alt"
+    />
+    <meta content="es_CO" property="og:locale" />
+    <title>Guía IPS Colmédica | Aquarius</title>
+    <link href="../images/logo-cohete.png" rel="icon" type="image/png" />
+  </head>
+  <body>
+    <aside class="barra-lateral" id="barraLateral">
+      <div class="logo">
+        <img alt="Aquarius Radicación" height="100" src="../images/logo.png" width="200" />
+      </div>
+      <button
+        aria-label="Minimizar menú"
+        class="btn-colapsar"
+        id="btnColapsar"
+        title="Minimizar menú"
+      >
+        <img
+          alt=""
+          class="icono-colapsar"
+          height="40"
+          src="../images/iconos/colapsar.jpg"
+          width="40"
+        />
+      </button>
+      <nav class="menu">
+        <a aria-label="Inicio" class="opcion" href="../index.html" title="Inicio">
+          <img
+            alt=""
+            class="icono-opcion"
+            height="22"
+            src="../images/iconos/inicio.jpg"
+            width="22"
+          />
+          <span class="texto-opcion">Inicio</span>
+        </a>
+        <a aria-label="Guía" class="opcion" href="guia.html" title="Guía">
+          <img alt="" class="icono-opcion" height="22" src="../images/iconos/guia.jpg" width="22" />
+          <span class="texto-opcion">Guía</span>
+        </a>
+        <a aria-label="Normativa" class="opcion" href="normativa.html" title="Normativa">
+          <img
+            alt=""
+            class="icono-opcion"
+            height="22"
+            src="../images/iconos/normativa.jpg"
+            width="22"
+          />
+          <span class="texto-opcion">Normativa</span>
+        </a>
+        <a aria-label="Archivos" class="opcion" href="archivos.html" title="Archivos">
+          <img
+            alt=""
+            class="icono-opcion"
+            height="22"
+            src="../images/iconos/archivos.jpg"
+            width="22"
+          />
+          <span class="texto-opcion">Archivos</span>
+        </a>
+        <a aria-label="Practica" class="opcion" href="practica.html" title="Practica">
+          <img
+            alt=""
+            class="icono-opcion"
+            height="22"
+            src="../images/iconos/practica.jpg"
+            width="22"
+          />
+          <span class="texto-opcion">Practica</span>
+        </a>
+        <a aria-label="Masivos" class="opcion" href="masivos.html" title="Masivos">
+          <img
+            alt=""
+            class="icono-opcion"
+            height="22"
+            src="../images/iconos/masivos.jpg"
+            width="22"
+          />
+          <span class="texto-opcion">Masivos</span>
+        </a>
+        <a aria-label="Ayuda" class="opcion" href="ayuda.html" title="Ayuda">
+          <img
+            alt=""
+            class="icono-opcion"
+            height="22"
+            src="../images/iconos/ayuda.jpg"
+            width="22"
+          />
+          <span class="texto-opcion">Ayuda</span>
+        </a>
+      </nav>
+    </aside>
+    <main class="contenido">
+      <header>
+        <div class="guia-header">
+          <div>
+            <h1><span class="logo-mini-a">R</span>adicacion de cuentas médicas — IPS Colmédica</h1>
+            <p class="subtitulo">
+              Guia de radicacion de Cuentas Médicas para IPS y Proveedores — Versión 4
+            </p>
+          </div>
+          <a
+            class="btn-descargar"
+            download=""
+            href="../docs/Manual_Aquarius_IPS_PROVEEDORES_COLMEDICA_V4.pdf"
+          >
+            📥 Descargar Manual PDF
+          </a>
+        </div>
+      </header>
+      <nav aria-label="Índice de esta guía" class="guia-indice">
+        <p>Ir a:</p>
+        <ul>
+          <li><a href="#pasos-previos">1. Pasos previos para uso de la funcionalidad</a></li>
+          <li><a href="#requisitos">2. Requisitos básicos</a></li>
+          <li><a href="#individual">3. Radicación individual</a></li>
+          <li><a href="#masiva">4. Radicación Masiva</a></li>
+          <li><a href="#seguimiento">5. Seguimiento de radicados</a></li>
+          <li><a href="#tips">6. Tips para no olvidar</a></li>
+          <li><a href="#soporte">7. Soporte y canales de atención</a></li>
+        </ul>
+      </nav>
+      <section class="guia-seccion" id="pasos-previos">
+        <h2>1. Pasos previos para uso de la funcionalidad</h2>
+        <h3>Poseer acceso al portal web de Colmédica</h3>
+        <p>
+          Revise al interior de la IPS o Proveedor si cuenta con el acceso al portal web de
+          Colmédica MP.
+        </p>
+        <div class="aviso aviso-info">
+          <strong>Para IPS de Bogotá:</strong> escriba al correo
+          <a href="mailto:PORTALPRESTADORESIPS@COLMEDICA.COM">PORTALPRESTADORESIPS@COLMEDICA.COM</a
+          >, indicando razón social, NIT y correo electrónico.
+        </div>
+        <div class="aviso aviso-info">
+          <strong>Para regionales:</strong> deben apoyarse con su líder referente del área de
+          convenios, o en su defecto con las Jefaturas Regionales de Salud, indicando razón social,
+          NIT y correo electrónico.
+        </div>
+        <h3>Administración de delegados</h3>
+        <p>
+          Una vez tenga acceso como administrador del portal, debe realizar la acción de
+          <strong>delegatarios</strong> dentro de la IPS. Esta opción se activa cuando hay más de un
+          funcionario radicador.
+        </p>
+        <p>
+          El proceso es: <strong>Administración → Crear Delegados</strong> → diligenciar nombres,
+          identificación, cargo y perfil (seleccionar "Radicación Cuentas Médicas") → aceptar.
+        </p>
+      </section>
+      <section class="guia-seccion" id="requisitos">
+        <h2>2. Requisitos básicos</h2>
+        <ul class="guia-lista">
+          <li>Pertenecer a la red de IPS y Proveedores Jurídicos de Colmédica MP.</li>
+          <li>
+            Surtir el proceso de acceso y doble factor de autenticación en el Portal de Colmédica.
+          </li>
+          <li>
+            Remitir a través de su operador de facturación electrónica la representación gráfica y
+            el XML al buzón corporativo
+            <code>fe.colmedica.800106339@ctsprd.receptoriacarvajal.com</code>.
+          </li>
+          <li>
+            Garantizar una buena conexión de internet, de la cual depende un cargue óptimo y rápido.
+          </li>
+        </ul>
+      </section>
+      <section class="guia-seccion" id="individual">
+        <h2>3. Radicación individual</h2>
+        <ol class="guia-pasos">
+          <li>Ingrese al portal de Colmédica y entre por la opción <strong>IPS</strong>.</li>
+          <li>Seleccione <strong>Radicación Cuentas Médicas</strong> en el menú lateral.</li>
+          <li>
+            Haga clic en el ícono <strong>"Radicar Documentos"</strong> (parte superior izquierda).
+          </li>
+          <li>
+            Seleccione la serie: <strong>COLMEDICA-NORMA</strong> (cumple Res. 2275 y 2284) o
+            <strong>COLMEDICA-SIN-NORMA</strong> (modelo anterior) y elija "Cargue individual".
+          </li>
+          <li>
+            Diligencie el formulario. El campo <strong>Prefijo</strong> solo admite mayúsculas; los
+            valores de factura y UPD van sin puntos ni comas (0 si no aplica).
+          </li>
+          <li>Cargue los archivos requeridos.</li>
+        </ol>
+        <div class="guia-tabla-doble">
+          <div>
+            <h3>Con norma (Res. 2275 / 2284)</h3>
+            <table class="guia-tabla">
+              <caption>
+                3. Radicación individual
+              </caption>
+              <thead>
+                <tr>
+                  <th>Documento</th>
+                  <th>Obligatorio</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Factura (PDF o .zip con XML)</td>
+                  <td>Sí</td>
+                </tr>
+                <tr>
+                  <td>Anexos tipificados Res. 2284 (.zip)</td>
+                  <td>Sí</td>
+                </tr>
+                <tr>
+                  <td>C.U.V (.txt o .json)</td>
+                  <td>Opcional</td>
+                </tr>
+                <tr>
+                  <td>RIPS (.zip, formato JSON)</td>
+                  <td>Opcional</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <h3>Sin norma (modelo anterior)</h3>
+            <table class="guia-tabla">
+              <caption>
+                3. Radicación individual
+              </caption>
+              <thead>
+                <tr>
+                  <th>Documento</th>
+                  <th>Obligatorio</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Factura (PDF o .zip)</td>
+                  <td>Sí</td>
+                </tr>
+                <tr>
+                  <td>Anexos (todos en un solo PDF)</td>
+                  <td>Sí</td>
+                </tr>
+                <tr>
+                  <td>RIPS estructura Res. 3374 (.zip)</td>
+                  <td>Opcional</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="aviso aviso-success">
+          Si cumple los requisitos, la plataforma genera un radicado con serie, fecha y hora — este
+          es su comprobante oficial de radicación.
+        </div>
+      </section>
+      <section class="guia-seccion" id="masiva">
+        <h2>4. Radicación Masiva</h2>
+        <p>Permite hasta <strong>500 facturas con índice</strong> por transacción.</p>
+        <ol class="guia-pasos">
+          <li>
+            Ingrese a "Radicar Documentos" → seleccione la serie correspondiente → elija "Cargue
+            masivo".
+          </li>
+          <li>
+            Descargue el archivo de ejemplo y cargue su
+            <strong>archivo índice en formato CSV</strong> (fechas en formato AAAA-MM-DD, máximo 10
+            MB, máximo 500 registros).
+          </li>
+          <li>
+            Si hay errores, el sistema muestra "Transacción errónea" y permite descargar un log con
+            las validaciones a corregir — debe cancelar, corregir y volver a cargar.
+          </li>
+          <li>
+            Si el archivo es correcto, cargue los documentos (factura, anexos, RIPS) con
+            <strong>el mismo nombre</strong> que relacionó en el CSV.
+          </li>
+          <li>Confirme con "Radicar Documentos" y descargue el reporte final si lo necesita.</li>
+        </ol>
+      </section>
+      <section class="guia-seccion" id="seguimiento">
+        <h2>5. Seguimiento de radicados</h2>
+        <p>Puede consultar el estado de sus radicados por:</p>
+        <ul class="guia-lista">
+          <li>Número de radicado</li>
+          <li>Rango de fechas de radicación</li>
+          <li>Radicados masivos (por número de transacción)</li>
+        </ul>
+        <h3>Estados posibles</h3>
+        <table class="guia-tabla">
+          <caption>
+            5. Seguimiento de radicados
+          </caption>
+          <thead>
+            <tr>
+              <th>Estado</th>
+              <th>Significado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Cargado</strong></td>
+              <td>La cuenta médica fue cargada exitosamente e inicia su proceso.</td>
+            </tr>
+            <tr>
+              <td><strong>En proceso</strong></td>
+              <td>La cuenta médica está en gestión de radicación.</td>
+            </tr>
+            <tr>
+              <td><strong>Gestionado</strong></td>
+              <td>La cuenta ya está radicada, con folio asignado.</td>
+            </tr>
+            <tr>
+              <td><strong>Con error</strong></td>
+              <td>Los archivos PDF están corruptos o en mal estado; debe volver a cargarlos.</td>
+            </tr>
+            <tr>
+              <td><strong>Glosa Total</strong></td>
+              <td>
+                La radicacion fue englosada en su totalidad y debera realizar el proceso de
+                subsanacion de la glosa y volver a cargarla.
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Aprobado Con Glosa</strong></td>
+              <td>
+                La radicacion fue aprobada en su mayoria y se engloso una parte de la factura, (Para
+                mayor informacion comunicarse con Glosas Y Devoluciones).
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="aviso aviso-warning">
+          <strong>Estado Devolución:</strong> valide la causal, corrija y realice un nuevo cargue.
+          No podrá cargar la subsanación hasta que el radicado original pase a estado Devolución.
+          Recibirá una notificación por correo cuando esto ocurra.
+        </div>
+      </section>
+      <section class="guia-seccion" id="tips">
+        <h2>6. Tips para no olvidar</h2>
+        <ul class="guia-lista">
+          <li>
+            Fecha de radicación en Colmédica: del <strong>1 al 15</strong> de cada mes (si el 15 cae
+            en fin de semana o festivo, se habilita un día hábil más).
+          </li>
+          <li>
+            Si radica después de esa fecha, la cuenta queda procesada con fecha del primer día hábil
+            del mes siguiente.
+          </li>
+          <li>
+            Esta opción aplica únicamente para
+            <strong>radicación de facturas por primera vez</strong> y
+            <strong>subsanación de devoluciones totales</strong>.
+          </li>
+          <li>
+            Para glosas parciales, envíe acta detallada en Excel y soportes a
+            <code>notificacionobjecionyglosascolmedica@colmedica.com</code>.
+          </li>
+        </ul>
+      </section>
+      <section class="guia-seccion" id="soporte">
+        <h2>7. Soporte y canales de atención</h2>
+        <div class="guia-tabla-doble">
+          <div>
+            <h3>Soporte administrativo (acceso al portal)</h3>
+            <p>Línea Bogotá: <strong>601-7569000</strong>, opciones 1 y 7</p>
+            <p>Temas: dificultad de acceso, demoras en respuestas.</p>
+          </div>
+          <div>
+            <h3>Soporte técnico (plataforma de radicación)</h3>
+            <p>PBX <strong>601-3402501</strong> opción 5 · Celular <strong>3167330355</strong></p>
+            <p>Lunes a viernes, 7:00 am – 5:00 pm.</p>
+            <p>Temas: plataforma caída, avisos inesperados, no genera radicado.</p>
+          </div>
+        </div>
+        <p>
+          Para consultas sobre el resultado del proceso de una cuenta médica específica:
+          <a href="mailto:ernestop@colmedica.com.co">ernestop@colmedica.com.co</a>
+        </p>
+        <div class="aviso aviso-warning">
+          La plataforma Next Cloud ya no está activa para radicación de cuentas médicas. Los únicos
+          canales vigentes son este multirradicador (Aquarius) y la radicación física en las
+          instalaciones del proveedor Grupo ASD (Bogotá, Cra 23 No 27-33, lunes a viernes, jornada
+          continua).
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>
+        © <time datetime="2026">2026</time> Aquarius — Proyecto académico de radicación de cuentas
+        médicas. Universidad Central, Bogotá.
+      </p>
+      <p>Desarrollado por <strong>Bleiner Alexis Luna Obando</strong></p>
+    </footer>
+    <a
+      aria-label="Volver al inicio"
+      class="boton-inicio"
+      href="../index.html"
+      title="Volver al inicio"
+    >
+      <span>🚀</span>
+    </a>
+  </body>
+</html>

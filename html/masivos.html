@@ -1,0 +1,179 @@
+<!doctype html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="../css/estilos.css" rel="stylesheet" />
+    <meta content="Bleiner" name="author" />
+    <meta
+      content="Guía para radicar hasta 500 facturas por transacción mediante archivo índice CSV en Aquarius, con los pasos y errores más frecuentes del cargue masivo."
+      name="description"
+    />
+    <meta content="website" property="og:type" />
+    <meta content="Radicación Masiva | Aquarius" property="og:title" />
+    <meta
+      content="Guía para radicar hasta 500 facturas por transacción mediante archivo índice CSV en Aquarius, con los pasos y errores más frecuentes del cargue masivo."
+      property="og:description"
+    />
+    <meta content="https://eyker-07.github.io/Aquarius/html/masivos.html" property="og:url" />
+    <meta content="Aquarius" property="og:site_name" />
+    <meta content="https://eyker-07.github.io/Aquarius/images/Aquarius.png" property="og:image" />
+    <meta content="300" property="og:image:width" />
+    <meta content="261" property="og:image:height" />
+    <meta
+      content="Logotipo de Aquarius, portal de radicación de cuentas médicas"
+      property="og:image:alt"
+    />
+    <meta content="es_CO" property="og:locale" />
+    <title>Radicación Masiva | Aquarius</title>
+    <link href="../images/logo-cohete.png" rel="icon" type="image/png" />
+  </head>
+  <body>
+    <aside class="barra-lateral" id="barraLateral">
+      <div class="logo">
+        <img
+          alt="Aquarius Radicación"
+          class="logo-completo"
+          height="100"
+          src="../images/logo.png"
+          width="200"
+        />
+        <img
+          alt="Aquarius"
+          class="logo-mini-icono"
+          height="128"
+          src="../images/logo-cohete.png"
+          width="116"
+        />
+      </div>
+      <button
+        aria-label="Minimizar menú"
+        class="btn-colapsar"
+        id="btnColapsar"
+        title="Minimizar menú"
+      >
+        <img
+          alt=""
+          class="icono-colapsar"
+          height="40"
+          src="../images/iconos/colapsar.jpg"
+          width="40"
+        />
+      </button>
+      <nav class="menu">
+        <a aria-label="Inicio" class="opcion" href="../index.html" title="Inicio">
+          <img
+            alt=""
+            class="icono-opcion"
+            height="22"
+            src="../images/iconos/inicio.jpg"
+            width="22"
+          />
+          <span class="texto-opcion">Inicio</span>
+        </a>
+        <a aria-label="Guía" class="opcion" href="guia.html" title="Guía">
+          <img alt="" class="icono-opcion" height="22" src="../images/iconos/guia.jpg" width="22" />
+          <span class="texto-opcion">Guía</span>
+        </a>
+        <a aria-label="Normativa" class="opcion" href="normativa.html" title="Normativa">
+          <img
+            alt=""
+            class="icono-opcion"
+            height="22"
+            src="../images/iconos/normativa.jpg"
+            width="22"
+          />
+          <span class="texto-opcion">Normativa</span>
+        </a>
+        <a aria-label="Archivos" class="opcion" href="archivos.html" title="Archivos">
+          <img
+            alt=""
+            class="icono-opcion"
+            height="22"
+            src="../images/iconos/archivos.jpg"
+            width="22"
+          />
+          <span class="texto-opcion">Archivos</span>
+        </a>
+        <a aria-label="Practica" class="opcion" href="practica.html" title="Practica">
+          <img
+            alt=""
+            class="icono-opcion"
+            height="22"
+            src="../images/iconos/practica.jpg"
+            width="22"
+          />
+          <span class="texto-opcion">Practica</span>
+        </a>
+        <a aria-label="Masivos" class="opcion" href="masivos.html" title="Masivos">
+          <img
+            alt=""
+            class="icono-opcion"
+            height="22"
+            src="../images/iconos/masivos.jpg"
+            width="22"
+          />
+          <span class="texto-opcion">Masivos</span>
+        </a>
+        <a aria-label="Ayuda" class="opcion" href="ayuda.html" title="Ayuda">
+          <img
+            alt=""
+            class="icono-opcion"
+            height="22"
+            src="../images/iconos/ayuda.jpg"
+            width="22"
+          />
+          <span class="texto-opcion">Ayuda</span>
+        </a>
+      </nav>
+    </aside>
+    <main class="contenido">
+      <header>
+        <h1>Radicación Masiva</h1>
+        <p class="subtitulo">Radica hasta 500 facturas por transacción mediante archivo índice</p>
+      </header>
+      <section class="guia-seccion" id="pasos-masiva">
+        <h2>Pasos para radicar de forma masiva</h2>
+        <ol class="guia-pasos">
+          <li>
+            Ingrese a "Radicar Documentos" y seleccione la serie correspondiente → elija "Cargue
+            masivo".
+          </li>
+          <li>
+            Descargue el archivo de ejemplo y cargue su archivo índice en
+            <strong>formato CSV</strong> (fechas AAAA-MM-DD, máximo 10 MB, máximo 500 registros).
+          </li>
+          <li>
+            Si hay errores, el sistema muestra "Transacción errónea" con un log de validaciones a
+            corregir.
+          </li>
+          <li>
+            Cargue los documentos (factura, anexos, RIPS) con
+            <strong>el mismo nombre</strong> relacionado en el CSV.
+          </li>
+          <li>Confirme con "Radicar Documentos" y descargue el reporte final.</li>
+        </ol>
+      </section>
+      <div class="aviso aviso-info">
+        El nombre de cada archivo cargado debe coincidir exactamente con el registrado en el CSV
+        índice; un nombre distinto es la causa más común de error en el cargue masivo.
+      </div>
+    </main>
+    <footer>
+      <p>
+        © <time datetime="2026">2026</time> Aquarius — Proyecto académico de radicación de cuentas
+        médicas. Universidad Central, Bogotá.
+      </p>
+      <p>Desarrollado por <strong>Bleiner Alexis Luna Obando</strong></p>
+    </footer>
+    <a
+      aria-label="Volver al inicio"
+      class="boton-inicio"
+      href="../index.html"
+      title="Volver al inicio"
+    >
+      <span>🚀</span>
+    </a>
+  </body>
+</html>
