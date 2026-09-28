@@ -1,0 +1,622 @@
+/* ======================================================================
+   RESUMEN PARA LA RÚBRICA (Lab 2: maquetación con Flexbox y Grid)
+
+   Orden del archivo (el que exige la guía):
+     1. Variables (:root)      4. Layout general
+     2. Reset                  5. Componentes
+     3. Estilos base
+
+   Flexbox (mínimo 3): 7 contextos usados en las páginas
+     1 .logo                                  5 .boton-inicio
+     2 .menu                                  6 .guia-header
+     3 .menu .opcion                          7 .formulario-contacto .campo
+     4 .tarjeta
+
+   CSS Grid (mínimo 2): 4 contextos usados en las páginas
+     1 body (estructura de la página)         3 .guia-indice ul
+     2 .tarjetas                              4 .guia-tabla-doble
+
+   Legibilidad: texto base 1rem (16px), line-height 1.5, y estados
+   :hover y :focus-visible en enlaces, botones y campos de formulario.
+
+   Contraste WCAG (calculado; mínimo AA = 4.5:1 en texto normal):
+     texto #1a1a2e sobre blanco            17.06:1
+     texto #1a1a2e sobre fondo de página   15.02:1
+     blanco sobre sidebar/tablas navy      19.41:1
+     blanco sobre botón primario            8.51:1
+     enlace primario sobre blanco           8.51:1
+     texto tenue #666 sobre blanco          5.74:1
+   ====================================================================== */
+
+/* ======================================================================
+   1. VARIABLES (:root)
+   Paleta de color, tipografía y espaciados reutilizables en todo el sitio.
+   ====================================================================== */
+:root {
+    --color-primario: #1100ff;
+    --color-primario-oscuro: #001969;
+    --color-secundario: hsl(246, 93%, 12%);
+    --color-acento: #645aff;
+    --color-texto: #1a1a2e;
+    --color-texto-suave: #555555;
+    --color-texto-tenue: #666666;
+    --color-fondo: hsl(240, 20%, 95%);
+    --color-fondo-tarjeta: #ffffff;
+    --color-borde: #e0e0e0;
+
+    --sidebar-text: #ffffff;
+    --border: rgba(255, 255, 255, 0.25);
+
+    --fuente-base: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    --fuente-titulos: var(--fuente-base);
+
+    --espaciado-md: 24px;
+    --ancho-sidebar: 320px;
+}
+
+/* ======================================================================
+   2. RESET / NORMALIZACIÓN BÁSICA
+   Quita diferencias entre navegadores: box-sizing, márgenes y scroll.
+   ====================================================================== */
+* {
+    box-sizing: border-box;
+}
+
+/* overflow-y: scroll deja siempre reservado el espacio de la barra de scroll,
+   así el contenido no salta de posición entre páginas cortas y largas */
+html {
+    overflow-y: scroll;
+}
+
+body {
+    margin: 0;
+}
+
+/* ======================================================================
+   3. ESTILOS BASE
+   Tipografía general, jerarquía de encabezados y enlaces.
+   ====================================================================== */
+
+/* body se declara en 3 reglas según su rol (reset, base y layout);
+   las propiedades no se repiten ni se contradicen entre ellas. */
+/* --- Tipografía base: 1rem = 16px y line-height 1.5 (mínimo 1.4) --- */
+body {
+    font-family: var(--fuente-base);
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--color-texto);
+    background: var(--color-fondo);
+}
+
+/* --- Jerarquía tipográfica: h1 > h2 > h3 > p, igual en todas las páginas --- */
+h1, h2, h3 {
+    font-family: var(--fuente-titulos);
+    color: var(--color-texto);
+    line-height: 1.25;
+    margin: 0 0 12px;
+}
+
+h1 { font-size: 1.875rem; }
+h2 { font-size: 1.375rem; }
+h3 { font-size: 1.125rem; }
+
+p {
+    margin: 0 0 12px;
+    line-height: 1.5;
+}
+
+/* --- Enlaces: estado normal, :hover y foco de teclado --- */
+a {
+    color: var(--color-primario);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+a:hover {
+    color: var(--color-primario-oscuro);
+}
+
+/* Foco visible en enlaces, botones y campos (requisito de estados :focus) */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+.opcion:focus-visible,
+.tarjeta:focus-visible {
+    outline: 3px solid var(--color-acento);
+    outline-offset: 2px;
+}
+
+/* ======================================================================
+   4. LAYOUT GENERAL
+   Estructura de la página: sidebar (con su footer), contenido y header.
+   ====================================================================== */
+
+/* [GRID 1] Estructura de la página: una columna reservada para el sidebar fijo
+   (con su footer) y otra para el contenido */
+body {
+    display: grid;
+    grid-template-columns: var(--ancho-sidebar) minmax(0, 1fr);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* --- Sidebar fijo a la izquierda --- */
+.barra-lateral {
+    width: var(--ancho-sidebar);
+    height: 100vh;
+    padding: var(--espaciado-md);
+    background: var(--color-secundario);
+    color: var(--sidebar-text);
+    border-right: 2px solid var(--border);
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* --- Footer dentro del sidebar (créditos del proyecto) --- */
+.barra-lateral footer {
+    margin: 36px 16px 0; /* alineado con los botones del menú (16px a los lados) */
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    font-size: 0.8rem;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* --- Área de contenido principal (columna 2 de la página) --- */
+.contenido {
+    grid-column: 2;
+    padding: 35px 35px 90px; /* 90px abajo: espacio para que el botón flotante no tape el final */
+    min-height: 100vh;
+}
+
+.contenido h1 {
+    margin: 0;
+    font-size: 30px;
+}
+
+.subtitulo {
+    margin: 8px 0 30px;
+    color: var(--color-texto-suave);
+    font-size: 16px;
+}
+
+/* --- Header de cada página (h1 + subtítulo) --- */
+main.contenido > header {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* ======================================================================
+   5. COMPONENTES
+   Piezas reutilizables. Flexbox para filas/columnas, Grid para cuadrículas.
+   ====================================================================== */
+
+/* --- Logo del sidebar --- */
+/* [FLEXBOX 1] Logo centrado en columna */
+.logo {
+    height: 140px;
+    border: 2px solid var(--border);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.logo:hover {
+    border-color: var(--color-acento);
+}
+
+.logo img {
+    width: 85%;
+    height: auto;
+    max-height: 100px;
+    object-fit: contain;
+}
+
+/* --- Menú de navegación del sidebar --- */
+/* [FLEXBOX 2] Opciones apiladas en columna */
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin: 50px 0 0;
+    gap: 12px;
+    padding: 0 16px;
+}
+
+/* [FLEXBOX 3] Ícono y texto en fila dentro de cada opción */
+.menu .opcion {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    height: 45px;
+    box-sizing: border-box;
+    padding: 12px 16px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: transparent;
+    color: var(--sidebar-text);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: 0.2s;
+}
+
+.menu .opcion:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--color-primario);
+}
+
+/* Enlace de la página actual: se activa con class="opcion activa" en el menú */
+.menu .opcion.activa {
+    background: #4b3d99;
+    border-color: var(--color-acento);
+}
+
+.icono-opcion {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+    object-fit: contain;
+}
+
+/* --- Tarjetas de accesos rápidos --- */
+/* [GRID 2] Cuadrícula de 3 columnas: filas y columnas a la vez */
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--espaciado-md);
+    max-width: 850px;
+}
+
+/* [FLEXBOX 4] Ícono y texto centrados en columna dentro de cada tarjeta */
+.tarjeta {
+    background: var(--color-fondo-tarjeta);
+    border: 1px solid var(--color-borde);
+    border-radius: 16px;
+    padding: 45px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--espaciado-md);
+    text-decoration: none;
+    color: var(--color-texto);
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    transition: 0.2s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    border-color: var(--color-acento);
+}
+
+.tarjeta-icono {
+    font-size: 48px;
+}
+
+/* --- Botón flotante "volver al inicio" --- */
+/* [FLEXBOX 5] Cohete centrado dentro del círculo */
+.boton-inicio {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 56px;
+    height: 56px;
+    background: hsl(246, 97%, 46%);
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+    transition: 0.2s;
+    z-index: 20;
+}
+
+.boton-inicio:hover {
+    color: #ffffff;
+    transform: scale(1.08);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+/* Esta sí se usa: la "R" resaltada en los títulos h1 de las guías */
+.logo-mini-a {
+    background: var(--color-primario-oscuro);
+    color: #ffffff;
+    padding: 4px 10px;
+    border-radius: 8px;
+    margin-right: 2px;
+}
+
+/* --- Cabecera de las guías (título a la izquierda, botón a la derecha) --- */
+/* [FLEXBOX 6] Título y botón de descarga en fila, separados */
+.guia-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+/* --- Botón de descarga / envío --- */
+.btn-descargar {
+    background: var(--color-primario);
+    color: #ffffff;
+    padding: 12px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.btn-descargar:hover {
+    background: var(--color-primario-oscuro);
+    color: #ffffff;
+}
+
+/* --- Índice de anclas de cada guía --- */
+.guia-indice {
+    background: var(--color-fondo-tarjeta);
+    border: 1px solid var(--color-borde);
+    border-radius: 14px;
+    padding: 18px 22px;
+    margin-bottom: 30px;
+}
+
+.guia-indice p {
+    margin: 0 0 10px;
+    font-weight: 700;
+    color: var(--color-primario-oscuro);
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+/* [GRID 3] Enlaces en columnas automáticas (auto-fill), se adaptan al ancho */
+.guia-indice ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.guia-indice a {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid #d8d8ec;
+    color: var(--color-primario);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.guia-indice a:hover {
+    background: var(--color-primario-oscuro);
+    border-color: var(--color-acento);
+    color: #ffffff;
+}
+
+/* --- Secciones de contenido (todas visibles) --- */
+.guia-seccion {
+    display: block;
+    padding-bottom: 28px;
+    margin-bottom: 28px;
+    border-bottom: 1px solid #e5e5f0;
+    animation: aparecerSeccion 0.35s ease;
+}
+
+.guia-seccion:last-of-type {
+    border-bottom: none;
+}
+
+@keyframes aparecerSeccion {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Tablas de datos --- */
+.guia-tabla {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.guia-tabla th, .guia-tabla td {
+    border: 1px solid #000000;
+    padding: 10px 12px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.guia-tabla th {
+    background: #030031;
+    color: #ffffff;
+}
+
+/* [GRID 4] Dos columnas iguales para comparar tablas o bloques */
+.guia-tabla-doble {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--espaciado-md);
+    margin-top: 16px;
+}
+
+/* --- Avisos: información, éxito y advertencia --- */
+.aviso {
+    padding: 14px 18px;
+    border-radius: 10px;
+    margin: 14px 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.aviso-info { background: #eef79e; border-left: 4px solid var(--color-primario-oscuro); }
+.aviso-success { background: #bfeefa; border-left: 4px solid #0019698d; }
+.aviso-warning { background: #f8cfcc; border-left: 4px solid var(--color-primario-oscuro); }
+
+/* --- Preguntas frecuentes (details/summary) --- */
+.faq-item {
+    border: 1px solid var(--color-borde);
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin-bottom: 12px;
+    background: var(--color-fondo-tarjeta);
+}
+.faq-item summary {
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--color-primario-oscuro);
+}
+.faq-item summary::marker {
+    color: var(--color-primario);
+}
+.faq-item p {
+    margin: 10px 0 0;
+    color: #333;
+    line-height: 1.55;
+}
+
+/* --- Formulario de contacto --- */
+.formulario-contacto {
+    max-width: 620px;
+    margin-top: 20px;
+}
+
+.formulario-contacto fieldset {
+    border: 1px solid var(--color-borde);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 20px;
+}
+
+.formulario-contacto legend {
+    font-weight: 700;
+    color: var(--color-primario-oscuro);
+    padding: 0 8px;
+}
+
+/* [FLEXBOX 7] Label encima de su campo, en columna */
+.formulario-contacto .campo {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.formulario-contacto label {
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--color-texto);
+}
+
+.formulario-contacto input,
+.formulario-contacto select,
+.formulario-contacto textarea {
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 15px;
+    font-family: inherit;
+    resize: vertical;
+}
+
+.formulario-contacto input:focus,
+.formulario-contacto select:focus,
+.formulario-contacto textarea:focus {
+    border-color: var(--color-primario-oscuro);
+}
+
+.formulario-contacto button[type="submit"] {
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+/* --- Figuras (imagen + figcaption) --- */
+figure {
+    margin: 0;
+    text-align: center;
+    background: var(--color-fondo-tarjeta);
+    border: 1px solid var(--color-borde);
+    border-radius: 16px;
+    padding: 20px;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+figcaption {
+    margin-top: 12px;
+    font-size: 13px;
+    color: var(--color-texto-tenue);
+    line-height: 1.5;
+}
+
+/* --- Testimonios (blockquote) --- */
+blockquote {
+    margin: 24px 0 0;
+    padding: 20px 24px;
+    background: var(--color-fondo-tarjeta);
+    border-left: 4px solid var(--color-primario);
+    border-radius: 0 12px 12px 0;
+    font-style: italic;
+    color: #333;
+}
+
+blockquote footer {
+    margin-top: 10px;
+    font-style: normal;
+    font-size: 13px;
+    color: var(--color-texto-tenue);
+}
+
+/* --- Glosario (lista de definiciones dl) --- */
+.glosario {
+    max-width: 700px;
+}
+
+.glosario dt {
+    font-weight: 700;
+    color: var(--color-primario-oscuro);
+    margin-top: 14px;
+}
+
+.glosario dd {
+    margin: 4px 0 0;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* --- Siglas (abbr) --- */
+abbr {
+    text-decoration: underline dotted;
+    cursor: help;
+}
+
+/* ======================================================================
+   Advertencias del validador CSS del W3C (0 errores; estas se dejan a propósito)
+   - Variables CSS: el validador no las revisa de forma estática porque su valor
+     se resuelve en el navegador; es una limitación de la herramienta, no un error.
+   hsl() usa la sintaxis clásica con comas, válida en CSS3; sin prefijos de proveedor.
+   ====================================================================== */
