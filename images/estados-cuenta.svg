@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 340" width="900" height="340" role="img" font-family="Segoe UI, Roboto, Arial, sans-serif">
+  <title>Estados de una cuenta médica en Aquarius</title>
+  <defs>
+    <marker id="punta" viewBox="0 0 16 16" refX="14" refY="8" markerUnits="userSpaceOnUse" markerWidth="16" markerHeight="16" orient="auto">
+      <path d="M0 0 L16 8 L0 16 z" fill="#645aff"/>
+    </marker>
+  </defs>
+  <g>
+    <rect x="20" y="30" width="200" height="76" rx="14" fill="#001969"/>
+    <text x="120" y="63" text-anchor="middle" font-size="21" font-weight="700" fill="#ffffff">Cargado</text>
+    <text x="120" y="90" text-anchor="middle" font-size="16" fill="#e6e6ff">archivos recibidos</text>
+  </g>
+  <g>
+    <rect x="290" y="30" width="200" height="76" rx="14" fill="#001969"/>
+    <text x="390" y="63" text-anchor="middle" font-size="21" font-weight="700" fill="#ffffff">En proceso</text>
+    <text x="390" y="90" text-anchor="middle" font-size="16" fill="#e6e6ff">en gestión</text>
+  </g>
+  <g>
+    <rect x="560" y="30" width="200" height="76" rx="14" fill="#001969"/>
+    <text x="660" y="63" text-anchor="middle" font-size="21" font-weight="700" fill="#ffffff">Gestionado</text>
+    <text x="660" y="90" text-anchor="middle" font-size="16" fill="#e6e6ff">con folio asignado</text>
+  </g>
+  <line x1="226" y1="68" x2="282" y2="68" stroke="#645aff" stroke-width="5" marker-end="url(#punta)"/>
+  <line x1="496" y1="68" x2="552" y2="68" stroke="#645aff" stroke-width="5" marker-end="url(#punta)"/>
+
+  <g>
+    <rect x="520" y="196" width="170" height="64" rx="14" fill="#0b6b3a"/>
+    <text x="605" y="235" text-anchor="middle" font-size="21" font-weight="700" fill="#ffffff">Aprobado</text>
+  </g>
+  <g>
+    <rect x="730" y="196" width="150" height="64" rx="14" fill="#8a3b00"/>
+    <text x="805" y="235" text-anchor="middle" font-size="21" font-weight="700" fill="#ffffff">Devolución</text>
+  </g>
+  <line x1="640" y1="112" x2="616" y2="188" stroke="#645aff" stroke-width="5" marker-end="url(#punta)"/>
+  <line x1="680" y1="112" x2="784" y2="188" stroke="#645aff" stroke-width="5" marker-end="url(#punta)"/>
+  <text x="880" y="290" text-anchor="end" font-size="16" fill="#1a1a2e">corriges y radicas de nuevo</text>
+
+  <g>
+    <rect x="20" y="196" width="200" height="64" rx="14" fill="#8b1a1a"/>
+    <text x="120" y="235" text-anchor="middle" font-size="21" font-weight="700" fill="#ffffff">Con error</text>
+  </g>
+  <line x1="120" y1="112" x2="120" y2="188" stroke="#645aff" stroke-width="5" marker-end="url(#punta)"/>
+  <text x="138" y="156" font-size="16" fill="#1a1a2e">un PDF está dañado</text>
+  <text x="120" y="290" text-anchor="middle" font-size="16" fill="#1a1a2e">vuelves a cargar los PDF</text>
+</svg>
